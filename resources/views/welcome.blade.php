@@ -1,21 +1,25 @@
+<x-layout>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <div class="container py-5 text-center">
 
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <h1 class="display-4 fw-bold">
+            Daily News
+        </h1>
 
-</head>
+        <p class="lead my-4">
+            Rimani aggiornato con notizie di cronaca, sport, tecnologia e molto altro.
+        </p>
 
-<body>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="{{route('articles.index')}}" class="btn btn-1-custom">
+                Leggi articoli
+            </a>
 
-    <h1>titolo</h1>
+            <a href="{{route('articles.create')}}" class="btn btn-2-custom">
+                Pubblica articolo
+            </a>
+        </div>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rerum nulla recusandae debitis obcaecati ea! Quis deleniti sunt possimus culpa, quae odio, debitis assumenda non, vel eveniet vitae expedita accusamus?</p>
-    
-</body>
-</html>
+    </div>
+
+</x-layout>
