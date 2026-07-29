@@ -3,7 +3,7 @@
 <div class="card h-100">
 
     {{-- da implementare --}}
-    <img src="{{ Storage::url($article->image) }}" class="card-img-top card-image mt-3" alt="immagine articolo">
+    <img src="{{$article->imageUrl()}}" class="card-img-top card-image mt-3 card-img-custom" alt="immagine articolo">
 
     <div class="card-body text-center">
         <h5 class="card-title fw-bold">{{ $article->title }}</h5>

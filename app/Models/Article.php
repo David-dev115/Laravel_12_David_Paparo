@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
 class Article extends Model
 {
@@ -15,7 +16,7 @@ class Article extends Model
 
     public function imageUrl() {
 
-        dd('Sono dentro imageUrl');
+        // dd('Sono dentro imageUrl');
 
         if ($this->image) {
         return Storage::url($this->image);

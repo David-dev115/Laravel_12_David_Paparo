@@ -20,3 +20,9 @@ body{
 .btn-2-custom{
     background-color: rgb(120, 110, 95);
 }
+
+
+.card-img-custom {
+    height: 220px;
+    object-fit: cover;
+}

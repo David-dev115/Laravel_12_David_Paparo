@@ -3,7 +3,7 @@
 
     <div class="card h-100">
         {{-- implementare storage --}}
-        <img src="{{ $article->image_url}}" class="card-img-top card-image-detail mt-3" alt="immagine articolo">
+        <img src="{{$article->imageUrl()}}" class="card-img-top card-image-detail mt-3 card-img-custom" alt="{{ $article->title }}">
 
         <div class="card-body text-center">
             <h5 class="card-title fw-bold">{{ $article->title }}</h5>
