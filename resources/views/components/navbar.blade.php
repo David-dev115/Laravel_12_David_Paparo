@@ -12,10 +12,10 @@
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li> --}}
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Features</a>
+          <a class="nav-link text-white" href="{{route('articles.index')}}">Archivio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Pricing</a>
+          <a class="nav-link text-white" href="{{route('articles.create')}}">Crea</a>
         </li>
         {{-- <li class="nav-item">
           <a class="nav-link disabled" aria-disabled="true">Disabled</a>
