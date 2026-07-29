@@ -17,17 +17,10 @@
         <div class="text-center mb-3">
 
                 {{-- {{route('articles.show' , $article)}} --}}
-            <a href="#" class="btn btn-success">
+            <a href="{{route('articles.show' , $article)}}" class="btn btn-success">
                 Leggi Articolo completo
             </a>
         </div>
-
-        {{-- <p class="mb-1">
-            <span class="fw-semibold text-secondary">Contenuto</span>
-            <span>{{ $article->content }}</span>
-        </p>
-        --}}
-
 
     </div>
 

@@ -10,8 +10,8 @@
                 <h2 class="text-white mb-4">Aggiungi articolo</h2>
 
 
-                    {{-- da implementare --}}
-                {{-- <x-display-error></x-display-error> --}}
+                <x-display-error></x-display-error>
+
 
 
                 <div class="card shadow p-4">

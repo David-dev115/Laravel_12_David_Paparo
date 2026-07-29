@@ -31,12 +31,19 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
 
+        $request->validate([
+        'title' => 'required|max:255',
+        'subtitle' => 'nullable|max:255',
+        'content' => 'required',
+        'image' => 'nullable|image|max:2048',
+            ]);
+
         $title = $request->input('title');
         $subtitle = $request->input('subtitle');
         $content = $request->input('content');
         $image = null;
 
-        if ( $request->file('image')  ) {
+        if ( $request->hasFile('image')  ) {
         $image = $request->file('image')->store('images','public');
 
         }
@@ -49,11 +56,8 @@ class ArticleController extends Controller
         $article->content = $content;
         $article->image = $image;
 
-        // $article->user_id = Auth::id();
-
 
         $article->save();
-
 
         return redirect()->route('articles.index')->with('status', 'Articolo correttamente aggiunto');
     }
@@ -63,7 +67,7 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
-        //
+        return view ('articles.show' , compact('article'));
     }
 
     /**

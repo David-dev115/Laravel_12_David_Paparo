@@ -13,6 +13,22 @@ class Article extends Model
     'image',
 ];
 
+    public function imageUrl() {
+
+        dd('Sono dentro imageUrl');
+
+        if ($this->image) {
+        return Storage::url($this->image);
+    }
+
+        return Storage::url('images/default.jpg');
+
+
+    }
+
+
+
+
 
 
 }
