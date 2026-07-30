@@ -2,6 +2,13 @@
 
 <x-layout>
 
+    @if(session('status'))
+    <div class="alert alert-success">
+        {{ session('status') }}
+    </div>
+    @endif
+
+
     <div class="container py-5">
 
 
@@ -9,12 +16,12 @@
 
 
 
-                {{-- card dinamica component --}}
+            {{-- card dinamica component --}}
 
-                <x-card_detail :article="$article"/>
+            <x-card_detail :article="$article"/>
 
 
-                {{-- card dinamica component --}}
+            {{-- card dinamica component --}}
 
 
         </div>

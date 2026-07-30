@@ -33,10 +33,10 @@ class ArticleController extends Controller
     {
 
         $request->validate([
-        'title' => 'required|max:255',
-        'subtitle' => 'nullable|max:255',
+        'title' => 'required',
+        'subtitle' => 'nullable',
         'content' => 'required',
-        'image' => 'nullable|image|max:2048',
+        'image' => 'nullable|image|',
             ]);
 
         $title = $request->input('title');
@@ -76,7 +76,7 @@ class ArticleController extends Controller
      */
     public function edit(Article $article)
     {
-        //
+        return view ( 'articles.edit'  , compact('article')  );
     }
 
     /**
@@ -84,7 +84,22 @@ class ArticleController extends Controller
      */
     public function update(Request $request, Article $article)
     {
-        //
+        $dati = [
+        'title'   => $request->input('title'),
+        'subtitle' => $request->input('subtitle'),
+        'content'  => $request->input('content'),
+        'image'   => $request->input('image'),
+    ];
+
+        if ($request->file('image')) {
+        $dati['image'] = $request->file('image')->store('image', 'public');
+        }
+
+        $article->update($dati);
+
+        return redirect()->route('articles.show', $article)->with('status', 'Articolo correttamente modificato');
+
+
     }
 
     /**

@@ -20,6 +20,20 @@
 
         </div>
 
+        <div class="text-center mb-3 d-flex justify-content-center">
+
+            <a href="{{route('articles.edit', $article)}}" class="btn btn-primary">Modifica</a>
+
+            <a href="{{ route('articles.index') }}" class="btn btn-success mx-4">Catalogo</a>
+
+
+
+        </div>
+
+
+
+
+
     </div>
 
 </div>

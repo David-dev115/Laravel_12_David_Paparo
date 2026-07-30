@@ -6,12 +6,14 @@
     </div>
     @endif
 
-    <h2>tutti gli articoli</h2>
 
     <section>
 
 
         <div class="container">
+
+            <h2 class="text-center py-5">tutti gli articoli</h2>
+
 
 
             <div class="row">
@@ -23,7 +25,7 @@
 
                     {{-- card dinamica--}}
 
-                        <x-card  :article="$article"  ></x-card>
+                    <x-card  :article="$article"  ></x-card>
 
                     {{-- fine card dinamica --}}
 
