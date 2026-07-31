@@ -2,8 +2,10 @@
 
 <div class="card h-100">
 
-    {{-- da implementare --}}
-    <img src="{{$article->imageUrl()}}" class="card-img-top card-image mt-3 card-img-custom" alt="immagine articolo">
+
+    <img src="@if($article->image) {{Storage::url($article->image)}} @else{{Storage::url('public/images/default.jpg')}} @endif " class="card-img-top card-image mt-3 card-img-custom" alt="immagine articolo">
+
+
 
     <div class="card-body text-center">
         <h5 class="card-title fw-bold">{{ $article->title }}</h5>
